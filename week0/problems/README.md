@@ -171,7 +171,7 @@ var courses = {
     "Core Java" : "https://github.com/HackBulgaria/Core-Java-1"
 };
 
-for(course in courses) {
+for(var course in courses) {
   console.log("A link for " + course + " can be found here - " + courses[course]);
 };
 ```
@@ -205,7 +205,7 @@ Object.keys(courses).forEach(function(value) {
 });
 ```
 
-## Sortring Arrays
+## Sorting Arrays
 
 It is a good idea to read the documentation about sort - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
