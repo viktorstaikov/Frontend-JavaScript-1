@@ -1,22 +1,32 @@
 <html>
   <head>
     <title>Hack Bulgaria Tabs</title>  
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#tabs" ).tabs();
+      });
+    </script> 
   </head>
   <body>
-    <ul class='tabs'>
-      <li><a href='#tab1'>Tab 1</a></li>
-      <li><a href='#tab2'>Tab 2</a></li>
-      <li><a href='#tab3'>Tab 3</a></li>
-    </ul>
-    <div id='tab1'>
-      <p>Hi, this is the first tab.</p>
-    </div>
-    <div id='tab2'>
-      <p>This is the 2nd tab.</p>
-    </div>
-    <div id='tab3'>
-      <p>And this is the 3rd tab.</p>
+    <div id="tabs">
+      <ul class='tabs'>
+        <li><a href='#tab1'>Tab 1</a></li>
+        <li><a href='#tab2'>Tab 2</a></li>
+        <li><a href='#tab3'>Tab 3</a></li>
+      </ul>
+      <div id='tab1'>
+        <p>Hi, this is the first tab.</p>
+      </div>
+      <div id='tab2'>
+        <p>This is the 2nd tab.</p>
+      </div>
+      <div id='tab3'>
+        <p>And this is the 3rd tab.</p>
+      </div>
     </div>
   </body>
 </html>
