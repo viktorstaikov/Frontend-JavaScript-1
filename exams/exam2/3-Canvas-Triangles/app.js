@@ -42,6 +42,7 @@ window.onload = function() {
 
     if (typeof(localStorage) !== "undefined") {
       localStorage.setItem("triangles-" + Date.now(), canvas.toDataURL());
+      initLoadDdl();
     } else {
       alert("Local Storage not supported");
     }
@@ -51,8 +52,9 @@ window.onload = function() {
 };
 
 function initLoadDdl() {
+
   var images = Object.keys(localStorage).filter(function(key) {
-    return key.startsWith('triangles-');
+    return key.match('^triangles-');
   })
 
   var
@@ -61,5 +63,25 @@ function initLoadDdl() {
       items: images
     });
 
+  $('#load-ddl').empty();
   $('#load-ddl').append(parsedHtml);
+
+  $('#load-btn').on('click', function(){
+    var selection = $('#load-ddl').val();
+
+    if (typeof(localStorage) !== "undefined") {
+      var image = localStorage.getItem(selection);
+
+      var background = new Image();
+      background.src = image;
+
+      background.onload = function(){
+        var ctx = document.getElementById('canvas').getContext('2d');
+        ctx.clearRect(0,0,ctx.canvas.width, ctx.canvas.height);
+        ctx.drawImage(background,0,0);
+      }
+    } else {
+      alert("Local Storage not supported");
+    }
+  })
 }
