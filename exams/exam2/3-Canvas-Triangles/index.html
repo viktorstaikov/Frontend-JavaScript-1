@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3</title>
+</head>
+<body>
+
+<h2>Some 3-angles</h2>
+<canvas id="canvas" width="800" height="600" style="border:1px solid green"></canvas>
+
+<ul>
+	<li>
+		<label for="color">Color</label> <input type="color" id="colorpicker" name="color" value="#ff0000">	
+	</li>
+	<li>
+		<button id='clear-btn'>Clear</button>
+	</li>
+	<li>
+		<button id='save-btn'>Save</button>
+	</li>
+	<li >
+		<select id='load-ddl'></select>
+		<button id='load-btn'>Load</button>
+	</li>
+</ul>
+
+<script type="text/template" id="load-image-ddl-tmpl">
+<% _(items).forEach(function(item) { %>
+	<option><%=item%></option>
+<% }); %>
+</script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
