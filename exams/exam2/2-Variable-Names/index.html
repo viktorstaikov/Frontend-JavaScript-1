@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2-Variable-names</title>
+    <!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<body>
+
+<h2>Names</h2>
+<div id='wrap'>
+	
+</div>
+
+
+
+
+<script type="text/template" id="names-tmpl">
+	<ul>
+		<% _(items).forEach(function(item) { %>
+			<li>
+				<input type="text" class="name" value="<%=item.name%>"></input>
+				<button class="btn" data-id="<%= item.nameId %>" disabled>Update Name</button>
+			</li>
+		<% }); %>
+	</ul>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<script src="bower_components/lodash/dist/lodash.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

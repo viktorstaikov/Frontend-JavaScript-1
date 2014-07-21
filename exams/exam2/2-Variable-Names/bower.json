@@ -1,0 +1,21 @@
+{
+  "name": "2-Variable-Names",
+  "version": "0.0.0",
+  "homepage": "https://github.com/viktorstaikov/Frontend-JavaScript-1",
+  "authors": [
+    "Viktor Staikov <viktor.staikov@telerik.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1"
+  }
+}
