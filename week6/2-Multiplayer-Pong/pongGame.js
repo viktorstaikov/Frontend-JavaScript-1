@@ -18,7 +18,7 @@ var player = function (ctx, playerSide, playerColor, opt) {
   }
 
   var
-    width = opt.width || 20,
+    width = opt.width || 10,
     height = opt.height || 80,
     offset = opt.offset || 20,
     speed = opt.speed || 10,
@@ -43,18 +43,6 @@ var player = function (ctx, playerSide, playerColor, opt) {
   }
 
   function initControls() {
-    $(document).keydown(function (event) {
-
-      if (event.keyCode === 38) {
-        move('up');
-      }
-
-      if (event.keyCode === 40) {
-        move('down');
-      }
-    });
-
-
     var _lastPos = position;
     $(document).mousemove(function (e) {
 
@@ -63,6 +51,16 @@ var player = function (ctx, playerSide, playerColor, opt) {
       move(dir, Math.abs(e.offsetY - _lastPos.y));
       _lastPos.y = e.offsetY;
     });
+    // $(document).keydown(function (event) {
+
+    //   if (event.keyCode === 38) {
+    //     move('up');
+    //   }
+
+    //   if (event.keyCode === 40) {
+    //     move('down');
+    //   }
+    // });
   }
 
   function print() {
@@ -186,8 +184,9 @@ var pongGame = function (ctx) {
 
     if (b.position.x < player1.position.x + player1.width / 2) {
       if (Math.abs(b.position.y - player1.position.y) <= player1.height) {
-        n = new point(ctx.canvas.width / 2 - player1.position.x, ctx.canvas.height / 2 - player1.position.y);
-        n.normalize();
+        // n = new point(ctx.canvas.width / 2 - player1.position.x, ctx.canvas.height / 2 - player1.position.y);
+        // n.normalize();
+        n = new point(1,0);
         b.bounce(n);
       } else {
         end(2);
@@ -196,8 +195,9 @@ var pongGame = function (ctx) {
 
     if (b.position.x > player2.position.x - player2.width / 2) {
       if (Math.abs(b.position.y - player2.position.y) <= player2.height) {
-        n = new point(ctx.canvas.width / 2 - player2.position.x, ctx.canvas.height / 2 - player2.position.y);
-        n.normalize();
+        // n = new point(ctx.canvas.width / 2 - player2.position.x, ctx.canvas.height / 2 - player2.position.y);
+        // n.normalize();
+        n = new point(-1,0);
         b.bounce(n);
       } else {
         end(1);

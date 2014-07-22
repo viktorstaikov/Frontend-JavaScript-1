@@ -12,9 +12,10 @@ $(document).ready(function() {
 	$canvas[0].width = canvasW;
 	$canvas[0].height = canvasH;
 
-	var game = new pongGame(ctx);
-
-	$canvas.on('click', game.start);
+	$canvas.on('click', function(){
+		var game = new pongGame(ctx);
+		game.start();
+	});
 
 	ctx.fillStyle = "blue";
 	ctx.font = "bold 40px Arial";
