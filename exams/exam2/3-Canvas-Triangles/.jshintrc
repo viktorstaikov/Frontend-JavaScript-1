@@ -1,0 +1,9 @@
+{
+  "jquery" : true,
+  "browser" : true,
+  "globals" : {
+    "alert" : true,
+    "document" : true
+  }
+}
+

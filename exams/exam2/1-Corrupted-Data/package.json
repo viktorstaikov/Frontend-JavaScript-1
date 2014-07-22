@@ -1,0 +1,15 @@
+{
+  "name": "1-Corrupted-Data",
+  "version": "0.0.0",
+  "description": "You are present with data.json file that represents checkins for a given period of time in our training hall.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HackBulgaria/Frontend-JavaScript-1/tree/master/exams/exam2/1-Corrupted-Data"
+  },
+  "author": "Viktor Staikov",
+  "license": "MIT"
+}
