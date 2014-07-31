@@ -4,7 +4,9 @@ var GitHubApp = GitHubApp || {};
 
 var GitHubAppRouter = Backbone.Router.extend({
   routes: {
-    // Add the appropriate routes
+    "":"home",
+    "user/:user":"user",
+    "statistics":"stats"
   },
   initialize: function () {
     'use strict';
@@ -12,8 +14,12 @@ var GitHubAppRouter = Backbone.Router.extend({
   },
   home: function () {
     'use strict';
-    // Invoke the FrontCtrl.setView and FrontCtrl.render
-    // with appropriate parameters
+    GitHubApp.Controllers.FrontCtrl.setView({
+      view: GitHubApp.Views.Home,
+      model: this.users
+      partial: "partials/home.tpl"
+    });
+    GitHubApp.Controllers.FrontCtrl.render();
   },
   user: function (login) {
     'use strict';
